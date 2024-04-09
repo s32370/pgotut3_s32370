@@ -15,7 +15,9 @@ public class Main {
     }
 
     public double calculateAverageGrade(Student student) {
-        if (!students.contains(student)) {
+        StudentGroup group = new StudentGroup();
+        if (!StudentGroup.contains(student)) {
+
             throw new IllegalArgumentException("Student is not in the group.");
         }
         List<Double> grades = student.getGrades();
